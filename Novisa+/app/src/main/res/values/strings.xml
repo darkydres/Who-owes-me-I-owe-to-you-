@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Novisa+</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="textviewwelcome">BIENVENIDO IDENTIFIQUESE</string>
+    <string name="edittextIdentify">Identify</string>
+    <string name="textviewidentify">Identificacion</string>
+    <string name="textviewpassword">Contraseña</string>
+    <string name="btnEnterMain">Enter</string>
+    <string name="btnForgotPassword">olvido contraseña</string>
+    <string name="btnCreateNewUser">Crea nuevo usuario</string>
+    <string name="title_activity_create_new_users">Crear nuevo usuario</string>
+    <string name="textviewNameNMA">Nombre</string>
+    <string name="textviewEmailNMA">Email</string>
+    <string name="btnCreateNewManagerAccount">Crear</string>
+</resources>
