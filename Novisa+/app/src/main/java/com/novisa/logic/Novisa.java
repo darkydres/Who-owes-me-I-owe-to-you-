@@ -31,6 +31,52 @@ public class Novisa {
         return exist;
     }
 
+    public boolean existManagers(ManagerAccount manager)
+    {
+        boolean exist = false;
+
+        if(managers.contains(manager))
+        {
+            exist = true;
+        }
+        return exist;
+    }
+
+    public boolean existItem(Item item)
+    {
+        boolean exist = false;
+
+        if(items.contains(item))
+        {
+            exist = true;
+        }
+        return exist;
+    }
+
+    public boolean addNewManager(int idManager, String name, String email, String password)
+    {
+        boolean wasRight = false;
+        ManagerAccount newManager = new ManagerAccount(idManager, name, email, password);
+        if(existManagers(newManager) == false)
+        {
+            managers.add(newManager);
+            wasRight = true;
+        }
+
+        return wasRight;
+    }
+
+    public boolean existClientAccount(ClientAccount clientAccount)
+    {
+        boolean exist = false;
+
+        if(clientsAccount.contains(clientAccount))
+        {
+            exist = true;
+        }
+        return exist;
+    }
+
     public boolean addNewClient(String clientName, int id, String cellphone, String address, String email)
     {
         boolean wasRight = false;
@@ -41,6 +87,29 @@ public class Novisa {
             wasRight = true;
         }
 
+        return wasRight;
+    }
+
+    public boolean addNewItem(int idItem, String name, int price)
+    {
+        boolean wasRight = false;
+        Item newItem = new Item(idItem, name, price);
+        if(existItem(newItem) == false)
+        {
+            items.add(newItem);
+            wasRight = true;
+        }
+        return wasRight;
+    }
+
+    public boolean createNewClientAccount(ClientAccount clientAccount)
+    {
+        boolean wasRight = false;
+        ClientAccount newClientAccount = new ClientAccount(client.getId(),0,0);
+        if(existClientAccount(clientAccount)==false)
+        {
+            clientsAccount.add(newClientAccount);
+        }
         return wasRight;
     }
 
