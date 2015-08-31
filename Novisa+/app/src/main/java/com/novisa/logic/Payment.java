@@ -11,11 +11,13 @@ public class Payment {
     int idPayment;
     int amount;
 
-    public Payment(int orderNumber, int idPayment, int amount)
+    public Payment(int orderNumber, int idPayment, Date date, int amount, String description)
     {
         this.orderNumber = idPayment;
         this.idPayment = idPayment;
+        this.date = date;
         this.amount = amount;
+        this.description = description;
     }
 
     public int getOrderNumber() {

@@ -15,13 +15,13 @@ public class Order {
     ArrayList<Item> itemsId;
     int amountOrder;
 
-    public Order(int orderId, int idManagerAccount, int idClient, int amountOrder)
+    public Order(int orderId, int idManagerAccount, int idClient, ArrayList<Item> itemsId, int amountOrder)
     {
         this.orderId = orderId;
         this. idManagerAccount = idManagerAccount;
         this.idClient = idClient;
         this.amountOrder = amountOrder;
-        itemsId = new ArrayList<Item>();
+        this.itemsId = itemsId;
     }
 
     public ArrayList<Item> getItemsId()

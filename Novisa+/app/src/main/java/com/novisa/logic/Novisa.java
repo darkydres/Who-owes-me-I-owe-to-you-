@@ -1,6 +1,7 @@
 package com.novisa.logic;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by AndresFelipe on 30/07/2015.
@@ -105,12 +106,23 @@ public class Novisa {
     public boolean createNewClientAccount(ClientAccount clientAccount)
     {
         boolean wasRight = false;
-        ClientAccount newClientAccount = new ClientAccount(client.getId(),0,0);
-        if(existClientAccount(clientAccount)==false)
+
+        if(!existClientAccount(clientAccount))
         {
-            clientsAccount.add(newClientAccount);
+            clientsAccount.add(clientAccount);
         }
         return wasRight;
     }
 
+    public Order newOrder(int idOrder,ManagerAccount ma,ClientAccount ca,ArrayList<Item> items, int amount)
+    {
+        Order order = new Order(idOrder, ma.getIdManager(), ca.idClient, items, amount);
+        return  order;
+    }
+
+    public Payment newPayment(Order order, int idPayment, Date date, int amount, String description)
+    {
+        Payment payment = new Payment(order.getOrderId(), idPayment, date, amount, description);
+        return  payment;
+    }
 }
