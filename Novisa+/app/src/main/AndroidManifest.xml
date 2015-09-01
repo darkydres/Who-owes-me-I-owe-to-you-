@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.andresfelipe.novisa" >
-
+<uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +19,10 @@
         <activity
             android:name=".CreateNewUsers"
             android:label="@string/title_activity_create_new_users" >
+        </activity>
+        <activity
+            android:name=".PickContactActivity"
+            android:label="@string/title_activity_pick_contact" >
         </activity>
     </application>
 

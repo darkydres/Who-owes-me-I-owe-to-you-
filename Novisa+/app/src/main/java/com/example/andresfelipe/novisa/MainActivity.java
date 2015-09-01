@@ -26,6 +26,16 @@ public class MainActivity extends ActionBarActivity {
                 startActivity(create);
             }
         });
+
+        Button buttonForgotPassword = (Button) findViewById(R.id.buttonForgotPassword);
+        buttonForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent create = new Intent(MainActivity.this,PickContactActivity.class);
+                startActivity(create);
+            }
+        });
     }
 
     @Override

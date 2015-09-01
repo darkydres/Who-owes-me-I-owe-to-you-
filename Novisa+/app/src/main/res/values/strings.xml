@@ -14,4 +14,6 @@
     <string name="textviewNameNMA">Nombre</string>
     <string name="textviewEmailNMA">Email</string>
     <string name="btnCreateNewManagerAccount">Crear</string>
+    <string name="title_activity_pick_contact">PickContactActivity</string>
+    <string name="ContactListPicker">Lista de contactos</string>
 </resources>
